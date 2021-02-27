@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  
+  <!-- Change Upgrade code below to any other GUID -->
+  
+  <Product Id="*" Name="WixLocalizationSample" Language="1033" Version="1.0.0.0"
+           Manufacturer="Someone" UpgradeCode="PUT-GUID-HERE">
+    
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <UIRef Id="WixUI_Mondo" />
+    <Feature Id="ProductFeature" Title="WixLocalizationSample" Level="1" />
+
+    <Property Id='STRING1' Value="!(loc.StringSample_ONE)" />
+    <Property Id='STRING2' Value="!(loc.StringSample_TWO)" />
+    <Property Id='STRING3' Value="!(loc.StringSample_THREE)" />
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="WixLocalizationSample">
+          <Component Feature="ProductFeature">
+            <File Source="$(env.SystemRoot)\notepad.exe" />
+          </Component>
+        </Directory>
+      </Directory>
+    </Directory>
+
+  </Product>
+</Wix>

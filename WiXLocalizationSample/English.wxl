@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+  
+  <String Id="StringSample_ONE"><![CDATA[This is string sample ONE.]]></String>
+  <String Id="StringSample_TWO"><![CDATA[This is string sample TWO.]]></String>
+  <String Id="StringSample_THREE">This is string sample THREE.</String>
+  
+</WixLocalization>
